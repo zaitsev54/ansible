@@ -31,7 +31,8 @@ localhost                  : ok=3    changed=0    unreachable=0    failed=0    s
 ## 2. Найдите файл с переменными (group_vars) в котором задаётся найденное в первом пункте значение и поменяйте его на 'all default fact'. 
 
 14:49:41 alex@upc(0):~/devops-ansible/1$ cat group_vars/all/examp.yml 
-....
+
+.......
   some_fact: "all default fact"
 
 
@@ -89,10 +90,12 @@ ubuntu                     : ok=3    changed=0    unreachable=0    failed=0    s
 ## 5. Добавьте факты в group_vars каждой из групп хостов так, чтобы для some_fact получились следующие значения: для deb - 'deb default fact', для el - 'el default fact'.
 
 15:01:00 alex@upc(0):~/devops-ansible/1$ cat group_vars/deb/examp.yml ;echo ""
-...
+
+.......
   some_fact: "deb default fact"
 15:01:08 alex@upc(0):~/devops-ansible/1$ cat group_vars/el/examp.yml ;echo ""
-...
+
+.......
   some_fact: "el default fact"
 15:01:14 alex@upc(0):~/devops-ansible/1$ 
 
@@ -183,7 +186,7 @@ ubuntu                     : ok=3    changed=0    unreachable=0    failed=0    s
 ## 10. В prod.yml добавьте новую группу хостов с именем local, в ней разместите localhost с необходимым типом подключения.
 
 15:48:07 alex@upc(0):~/devops-ansible/1$ cat inventory/prod.yml ; echo ""
- ---
+.......
   el:
     hosts:
       centos7:
